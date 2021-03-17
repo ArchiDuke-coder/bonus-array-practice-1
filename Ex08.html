@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let size = 10;
+    let list = [];
+    for (let i = 0; i < size; i++) {
+        let int = Math.floor((Math.random() - 0.5) * 10);
+        list.push(int);
+    }
+    document.write(' Dãy ban đầu:  '+ '<br/>'+list + '<br/><br/>');
+    list.sort(function(a, b){return b-a});
+    document.write('Dãy xếp theo thứ tự giảm dần: '+'<br/>'+list);
+
+
+</script>

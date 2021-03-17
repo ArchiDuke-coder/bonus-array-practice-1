@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex02</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    const min = 0;
+    const max = 20;
+    let origin = Math.floor(Math.random() * (max - min) + min);
+    let list = [origin];
+    let count = 1;
+    let checknum = true;
+    //Khởi tạo mảng có các phần tử đôi một phân biệt
+    while (count < 10) {
+        let int = Math.floor(Math.random() * (max - min) + min);
+        for (let k = 0; k < count; k++) {
+            if (int == list[k]) {
+                checknum = false;
+            }
+        }
+        if (checknum){
+            list.push(int);
+            count++;
+        }
+        checknum = true;
+    }
+    console.log(list);
+
+    //Tìm giá trị lớn nhất
+    let maxnum = list[0];
+    let maxindex = 0;
+    for (let j = 0; j < list.length; j++){
+        if (list[j] >= maxnum){
+            maxnum = list[j];
+            maxindex = j;
+        }
+    }
+    document.write(list.toString()+'<br/>'+'Số lớn nhất bằng '+ maxnum+' ở vị trí '+ (maxindex+1));
+</script>

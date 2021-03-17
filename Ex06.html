@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let size = 10;
+    let list = [];
+    let check = false;
+    let v = parseInt(prompt('Nhập 1 số nguyên bất kỳ: '));
+    for (let i = 0; i < size; i++){
+        let int = Math.floor((Math.random()-0.5)*20);
+        list.push(int);
+        if (int == v){
+            check = true;
+        }
+    }
+    if (check){
+        document.write('Dãy '+list+' có chứa phần tử '+v);
+    } else {
+        document.write('Dãy '+list+' không chứa phần tử '+v);
+    }
+
+</script>

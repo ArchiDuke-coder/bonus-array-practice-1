@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let size = 10;
+    let list = [];
+    let check = false;
+    let v = parseInt(prompt('Nhập 1 số nguyên bất kỳ: '));
+    let pos = [];
+    for (let i = 0; i < size; i++){
+        let int = Math.floor((Math.random()-0.5)*10);
+        list.push(int);
+        if (int == v){
+            check = true;
+            pos.push(i);
+        }
+    }
+    document.write('Dãy ban đầu:   ' + '<br/>'+list + '<br/>' +'<br/>');
+    console.log('pos length =  ', pos.length);
+    if (check){
+        for (let j = 0; j < pos.length; j++){
+            list.splice(pos[j]-j,1);
+        }
+        for (let j = 0; j < pos.length; j++){
+            list.push(0);
+        }
+        document.write('Dãy sau khi loại bỏ '+ v+ '<br/>'+ list);
+    }
+</script>

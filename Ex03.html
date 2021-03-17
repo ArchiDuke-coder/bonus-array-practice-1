@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let size = parseInt(prompt("Chọn kích thước dãy: "));
+    let list = [];
+    for (let i = 0; i < size; i++){
+        let int = Math.floor(Math.random()*10000);
+        list.push(int);
+    }
+    //console.log(list);
+    let max = list[0];
+    let sum = 0;
+    for (let i = 0; i< list.length; i++){
+        if (max < list[i]){
+            max = list[i];
+            sum += list[i];
+        }
+    }
+    let avg = sum/(list.length);
+    document.write(list + '<br/>'+'Số lớn nhất bằng '+ max + ';&nbsp&nbsp       Trung bình bằng '+avg.toFixed(2));
+</script>
